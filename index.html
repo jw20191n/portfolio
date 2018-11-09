@@ -14,10 +14,10 @@
 </head>
 
 <body class="home">
-    <div class="flex">
-      <main class="flex-inner">
+  <div class="flex">
+    <main class="flex-inner">
 
-        <a class="theme-toggle" onclick="dark()">
+      <a class="theme-toggle" onclick="dark()">
           <svg id="moon" width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
             <title>moon</title>
             <path d="M16 13.258c-1.562 2.357-4.238 3.911-7.277 3.911-4.818 0-8.723-3.905-8.723-8.723 0-4.062 2.776-7.475 6.534-8.446-.914 1.379-1.446 3.033-1.446 4.812 0 4.818 3.905 8.723 8.723 8.723.756 0 1.489-.096 2.189-.277z" fill="#6B36E3">
@@ -30,65 +30,64 @@
         </svg>
       </a><!-- end of svg link to change background -->
 
-        <nav>
-          <li><a href="">Projects</a></li>
-          <li><a href="https://jiayiwangjiayi.wordpress.com/">Blog</a></li>
-          <li><a href="">About</a></li>
-        </nav>
+      <nav>
+        <li><a href="https://github.com/jw20191n">Code</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </nav>
 
-        <div class="site-content">
-          <article>
-            <section class="intro">
-              <h1>
+      <div class="site-content">
+        <article>
+          <section class="intro">
+            <h1>
                 Jiayi Wang is a designer / front end developer at New York.<br>
                 She is currently at the Instructional Technology and Media Program. Teachers College, Columbia University, NY.
               </h1>
-            </section>
-            <section class="current"></section>
-            <section class="proj"></section>
+          </section>
+          <section class="current">
+            <!-- <img id="breathing-halftone" class="halftone" src="images/pic.jpeg" data-src="images/pic.jpeg" width="400" height="400"/> -->
 
-          </article><!-- end of article -->
-        </div><!-- end of site-content -->
+          </section>
+          <section class="proj"></section>
 
-
-      </main><!--end of class flex-inner  -->
-
-    </div><!--end of flex  -->
+        </article><!-- end of article -->
+      </div><!-- end of site-content -->
 
 
+    </main>
+    <!--end of class flex-inner  -->
 
-          <!-- command + forward slash, automatically adding comment -->
+  </div>
+  <!--end of flex  -->
 
-
-
-
-
-          <!--  Class note week2: font awsome, googlefont, flexbox and css animation
-  <footer>
-    <div>
-      <p><i class="far fa-address-book fa-2x spin"></i><a href="mailto:jw3676@tc.columbia.edu">jw3676@tc.columbia.edu</a></p>
-      <p><i class="fab fa-earlybirds fa-5x spin"></i><a href="mailto:jw3676@tc.columbia.edu">jw3676@tc.columbia.edu</a></p>
-      <p id="newfont">TRYING OUT A NEW FONT!!<p>
-
-    </div>
-
-    <div class="row">
-      <div class="column side">AA</div>
-      <div class="column middle">BB</div>
-      <div class="column side">CC</div>
-    </div>
-
-  </footer>
-
--->
-
-
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-          <script src="main.js"></script>
-
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="breathing-halftone.pkgd.js"></script>
+  <script>
+    window.onload = function() {
+      var img = document.querySelector('#breathing-halftone');
+      var halftone = window.halftone = new BreathingHalftone(img, {
+        // dotSize: 1/40
+        // dotSizeThreshold: 0.7
+        // oscAmplitude: 0.3
+        // oscPeriod: 2
+        // initVelocity: 0.01,
+        isAdditive: false,
+        // isRadial: true,
+        // friction: 0.2,
+        // isChannelLens: false,
+        // channels: [ 'green', 'blue' ,'red'],
+        // channels: [ 'lum' ],
+        // hoverDiameter: 0.3,
+        // hoverForce: -0.02,
+        // activeDiameter: 0.6,
+        // activeForce: 0.01
+      });
+    };
+  </script>
 </body>
 
 
