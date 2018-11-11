@@ -5,7 +5,9 @@ body.home {
   /* color: #384150; */
   display: flex;
   flex-direction: column;
-  font-family: 'Krub', sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Overpass Mono', monospace; */
+  /* font-family: 'Krub', sans-serif; */
   /* justify-content: center; */
   margin: 0;
 }
@@ -93,8 +95,8 @@ article {
 }
 
 .intro{
-  margin-top: 110px;
-  margin-bottom: 110px;
+  margin-top: 150px;
+  margin-bottom: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +127,7 @@ article {
 }
 
 
-.home-row.row-items{
+.row-items{
   position: relative;
   margin-bottom: 56px;
 }
@@ -137,22 +139,38 @@ article {
   letter-spacing: 1.5px;
 }
 
-.texts{
+.texts-1{
   font-size: 16px;
   color: #384150;
+}
+
+
+a.texts{
+  font-size: 16px;
+  color: #384150;
+  text-decoration: none;
+  transition: all .5s ease-out;
+  background-color: #f5f9f8;
+}
+
+a.texts:hover{
+  text-decoration: none;
+  background-color: #f0eafc;
 }
 
 .support-texts{
   color:#b3bbc9;
 }
 
-/* --------------------Dark Mode------------------------------- */
+/* ----------------------------Dark Mode-------------------------------- */
 body.darkMode {
     color: #000000;
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-family: 'Krub', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+    /* font-family: 'Overpass Mono', monospace; */
+    /* font-family: 'Krub', sans-serif; */
     justify-content: center;
     margin: 0;
 }
@@ -172,15 +190,34 @@ body.darkMode {
   color: #e2e5eb;
 }
 
+.darkMode .texts-1{
+  color:#afa2ce;
+}
+
 .darkMode nav a{
   color:#e2e5eb;
+}
+
+.darkMode a.texts{
+  /* color:#e2e5eb; */
+  color:#B5B7BC;
+  background: linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,.07) 0,hsla(0,0%,100%,.07));
+}
+
+.darkMode a.texts:hover{
+  background-color: hsla(0,0%,100%,.07);
+}
+
+.darkMode .support-texts{
+  color:#62627D;
 }
 
 .invisible{
   display: none;
 }
 
-/* --------------------------RESPONSIVE-------------------------- */
+/* --------------------------RESPONSIVE------------------------------ */
+/* --------------------------breakpoint:960-------------------------- */
 @media screen and (max-width: 960px) {
   .flex {
     padding: 0;
@@ -192,7 +229,7 @@ body.darkMode {
   }
 
   .intro{
-    padding: 50px 0 0 0;
+    padding: 10px 0 0 0;
   }
 
   nav{
@@ -201,7 +238,7 @@ body.darkMode {
 
 }/*end of media  */
 
-
+/*----------------------------------breakpoint:768-------------------------------  */
 @media screen and (max-width: 768px) {
   .site-content {
       max-width: 600px;
@@ -232,7 +269,7 @@ article{
 
 .intro{
   padding: 50px 0 0 0;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .row-items{
@@ -241,9 +278,13 @@ article{
 
 }/*end of media  */
 
-
+/*----------------------------------breakpoint:460-------------------------------  */
 @media screen and (max-width: 460px) {
   nav{
   margin-top: 2.6666rem;
+  }
+
+  .intro{
+    padding:0;
   }
 }/*end of media  */
