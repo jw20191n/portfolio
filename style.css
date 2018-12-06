@@ -117,7 +117,8 @@ article {
     flex-direction: row;
     align-items: baseline;
     margin-bottom: 56px;
-    justify-content:space-between;
+    /* width: 400px; */
+    /* justify-content:space-between; */
 }
 
 
@@ -137,6 +138,7 @@ article {
   color:#b3bbc9;
   font-family: 'Nanum Gothic Coding', monospace;
   letter-spacing: 1.5px;
+  width: 200px;
 }
 
 .texts-1{

@@ -327,7 +327,7 @@ Halftone.defaults = {
   // dot size
   dotSize: 1/40,
   dotSizeThreshold: 0.05,
-  initVelocity: 0.02,
+  initVelocity: 0.01,
   oscPeriod: 3,
   oscAmplitude: 0.2,
   // layout and color
