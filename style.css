@@ -198,6 +198,16 @@ a.texts:hover {
   background-color: #f0eafc;
 }
 
+button.texts{
+  font-size: 16px;
+  color: #384150;
+  text-decoration: none;
+  transition: all .5s ease-out;
+  background-color: #f5f9f8;
+  border: none;
+  padding: 0px;
+}
+
 .support-texts {
   color: #b3bbc9;
 }
