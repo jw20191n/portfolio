@@ -32,7 +32,7 @@ nav li{
 
 nav li a{
   display: block;
-  padding:20px;
+  padding:20px 20px 20px 0px;
   float: right;
   color: #384150;
 }
