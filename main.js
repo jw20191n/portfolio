@@ -1,6 +1,7 @@
-console.log("hello");
+const wave = String.fromCodePoint(0x1F44B);
+console.log("Hey " + wave);
 
-
+//dark
 function dark() {
   var element = document.querySelector('.home');
   element.classList.toggle("darkMode");
