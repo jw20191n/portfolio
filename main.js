@@ -1,7 +1,8 @@
+//console log welcome information
 const wave = String.fromCodePoint(0x1F44B);
 console.log("Hey " + wave);
 
-//dark
+//dark mode
 function dark() {
   var element = document.querySelector('.home');
   element.classList.toggle("darkMode");
@@ -16,5 +17,6 @@ function svgToggle(){
 
   icon.classList.toggle('invisible');
   icon2.classList.toggle('invisible');
-
 }
+
+

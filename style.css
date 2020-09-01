@@ -147,7 +147,7 @@ article {
   /* display: flex;
   flex-direction: column; */
   justify-content: center;
-  height: 70vh;
+  height: 60vh;
 }
 
 .slider h1 {
@@ -156,7 +156,7 @@ article {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
   line-height: 36px;
-  padding-top: 8vh;
+  padding-top: 5%;
   padding-left: 20%;
   padding-right: 20%;
 }
@@ -174,47 +174,23 @@ a.conversation{
   text-decoration: none;
 }
 
-.carousel-control-next{
-  padding-right:0;
-  margin-right:0;
-  right: -5vw;
-  width: 5%;
-  height: 5%;
-  padding-top: 30vh;
+a.conversation:hover{
+  text-decoration: none;
+  color: #9b8aba;
+  transition: all .5s ease-out;
 }
 
-.carousel-control-next-icon{
-  background-image: none;
-  background-color: #efefef;
-  color: #c2c2c2;
-  margin-right:0;
-  padding-right:0;
-  text-align: center;
-  height: 30px;
-  width: 30px;
+.carousel-control-next, .carousel-control-prev{
+  /* background-image: none; */
 }
 
-
-.carousel-control-prev{
-  padding-right:0;
-  margin-right:0;
-  left: -5vw;
-  width: 5%;
-  height: 5%;
-  padding-top: 30vh;
+/* .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(176, 133, 255)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-.carousel-control-prev-icon{
-  background-image: none;
-  background-color: #efefef;
-  color: #c2c2c2;
-  margin-right:0;
-  padding-right:0; 
-  text-align: center;
-  height: 30px;
-  width: 30px;
-
-}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(196, 169, 245)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+} */
 
 /* ------------------------------------------------- */
 
@@ -446,6 +422,15 @@ body.darkMode {
     padding-right: 0;
     padding-bottom: 20%;
   }
+
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    display: none;
+  }
+  
+  
+  .carousel-control-prev{
+    display: none;
+  }
 }
 
 /*end of media  */
@@ -477,19 +462,7 @@ body.darkMode {
   .slider h1{
     padding-top: 20%;
   }
-
-  .carousel-control-next-icon{
-    display: none;
-  }
   
-  
-  .carousel-control-prev{
-    display: none;
-  }
-  
-  .carousel-control-prev-icon{
-    display: none;
-  }
 }
 
 /*end of media  */
