@@ -1,18 +1,9 @@
 body.home {
-  align-items: center;
-  /* color: blue; */
-  /* color: #384150; */
-  display: flex;
-  flex-direction: column;
   font-family: 'Oxygen', sans-serif;
-  /* margin: 0; */
 }
 
 .flex {
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   width: 100%;
   background: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #99c99c 100%);
 	background-size: 400% 400%;
@@ -21,43 +12,26 @@ body.home {
 	animation: Gradient 20s ease infinite;
   padding: 50px 100px 0px 100px;
 }
+
 /* -------------------     Gradient Animation     --------------------*/
 @-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50 }
+	100% { background-position: 0% 50% }
 }
 
 @-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50% }
+	100% { background-position: 0% 50% }
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50% }
+	100% { background-position: 0% 50% }
 }
-/* ------------------------------------------------------ */
+/* --------------------------------------------------------------------------------- */
 
 .flex-inner {
   background-color: #fff;
@@ -69,20 +43,15 @@ body.home {
   width: 100%;
   position: relative;
   flex-direction: column;
-  align-items: center;
 }
 
+
+/* ---------------------------           nav      -------------------------------- */
 .theme-toggle {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20px;
-}
-
-.site-cotent {
-  display: flex;
-  max-width: 700px;
-  padding-top: 100px;
+  padding: 0 20px 20px 20px;
 }
 
 nav {
@@ -94,15 +63,20 @@ nav {
   user-select: none;
 }
 
-.link-group:last-child {
+ul#menu{
+  list-style-type: none;
+}
+
+ul#menu:last-child {
   margin-left: auto;
 }
 
-nav .link-group a {
+ul#menu li {
+  display: inline;
   margin-right: 40px;
 }
 
-.links {
+a.links {
   font-size: 16px;
   position: relative;
   top: 8px;
@@ -114,40 +88,19 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* ------------------------------------  main part of index.html  ------------------------ */
 article {
   margin-left: 56px;
   margin-right: 56px;
 }
 
-/* .intro {
-  margin-top: 20%;
-  margin-bottom: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.intro h1 {
-  color: #384150;
-  font-size: 24px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
-  line-height: 36px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* ---------------------  carousel -------------------- */
+/* -----------------------------             carousel           ---------------------- */
 
 .slider {
   margin-top: 10%;
   margin-bottom: 20%;
-  /* display: flex;
-  flex-direction: column; */
   justify-content: center;
-  height: 60vh;
+  height: 50vh;
 }
 
 .slider h1 {
@@ -180,41 +133,17 @@ a.conversation:hover{
   transition: all .5s ease-out;
 }
 
-.carousel-control-next, .carousel-control-prev{
-  /* background-image: none; */
-}
+/* ------------------------        section: current and proj             ------------------------- */
 
-/* .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(176, 133, 255)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(196, 169, 245)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-} */
-
-/* ------------------------------------------------- */
-
-
-.home-row {
+section {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   margin-bottom: 56px;
-  /* width: 400px; */
-  /* justify-content:space-between; */
 }
 
-.home-row.content {
-  display: block;
-  width: 500px;
-}
-
-.row-items {
-  position: relative;
-  margin-bottom: 56px;
-}
-
-.lable h4 {
+h4.lable {
+  flex: 1;
   font-size: 16px;
   color: #b3bbc9;
   font-family: 'Nanum Gothic Coding', monospace;
@@ -222,7 +151,16 @@ a.conversation:hover{
   width: 200px;
 }
 
-.texts-1 {
+.content {
+  flex: 4.5;
+  display: block;
+}
+
+.proj-details {
+  margin-bottom: 56px;
+}
+
+#current-p {
   font-size: 16px;
   color: #384150;
 }
@@ -238,16 +176,6 @@ a.texts {
 a.texts:hover {
   text-decoration: none;
   background-color: #f0eafc;
-}
-
-button.texts{
-  font-size: 16px;
-  color: #384150;
-  text-decoration: none;
-  transition: all .5s ease-out;
-  background-color: #f5f9f8;
-  border: none;
-  padding: 0px;
 }
 
 .support-texts {
@@ -266,19 +194,7 @@ a.link-logo:hover {
   color: #384150;
 }
 
-/* ----------------------------Dark Mode-------------------------------- */
-body.darkMode {
-  color: #000000;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Oxygen', sans-serif;
-  /* font-family: 'Overpass Mono', monospace; */
-  /* font-family: 'Krub', sans-serif; */
-  justify-content: center;
-  margin: 0;
-}
-
+/* ----------------------------              Dark Mode           -------------------------------- */
 .darkMode .flex {
   color: white;
   background-color: #2A2040;
@@ -290,20 +206,12 @@ body.darkMode {
   background-color: #2A2040;
 }
 
-/* .darkMode .intro h1 {
-  color: #e2e5eb;
-} */
-
-.darkMode .slider h1{
+.darkMode .slider h1, .darkMode a.links{
   color: #e2e5eb;
 }
 
-.darkMode .texts-1 {
+.darkMode .conversation, .darkMode #current-p{
   color: #afa2ce;
-}
-
-.darkMode nav a {
-  color: #e2e5eb;
 }
 
 .darkMode a.texts {
@@ -324,20 +232,21 @@ body.darkMode {
   display: none;
 }
 
-/* --------------------------RESPONSIVE------------------------------ */
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-image: none;
+}
+
+/* --------------------------          RESPONSIVE           ------------------------------ */
 /* --------------------------breakpoint:960-------------------------- */
 @media screen and (max-width: 960px) {
   .flex {
     padding: 0;
+    background-image: none;
   }
 
   .flex-inner {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     box-shadow: none;
-  }
-
-  .intro {
-    padding: 10px 0 0 0;
   }
 
   nav {
@@ -360,26 +269,18 @@ body.darkMode {
 /*end of media  */
 /*----------------------------------breakpoint:850-------------------------------  */
 @media screen and (max-width: 850px) {
-  .site-content {
+  .flex-inner {
     max-width: 600px;
     padding: 1.3333rem;
-    margin: 0;
-  }
-
-  nav {
-    padding-top: 10px;
+    margin: auto;
+    width: 100%;
   }
 
   nav a.links:last-child {
     margin-right: 0;
   }
 
-  .flex-inner {
-    padding: 0;
-    box-shadow: none;
-  }
-
-  .home-row {
+ section {
     flex-direction: column;
     padding: 0;
   }
@@ -388,20 +289,8 @@ body.darkMode {
     margin: 0;
   }
 
-  /* .intro {
-    padding: 0 0 0 0;
-    margin-top: 35%;
-    margin-bottom: 35%;
-  } */
-
-  /* .intro h1{
-    padding-top: 20%;
-    padding-bottom: 25%;
-    padding-left: 0px;
-  } */
-
   .slider{
-    padding: 0 0 0 0;
+    padding: 0;
     margin-top: 35%;
     margin-bottom: 35%;
   }
@@ -410,10 +299,9 @@ body.darkMode {
     padding-left: 0;
     padding-right: 0;
     padding-top: 20%;
-    padding-left: 0px;
   }
 
-  .row-items {
+  .proj-details {
     margin-bottom: 56px;
   }
 
@@ -427,7 +315,6 @@ body.darkMode {
     display: none;
   }
   
-  
   .carousel-control-prev{
     display: none;
   }
@@ -437,7 +324,7 @@ body.darkMode {
 /*----------------------------------breakpoint:460-------------------------------  */
 @media screen and (max-width: 460px) {
   
-  .site-content{
+  .flex-inner{
     padding: 0 1.3333rem;
   }
 
@@ -448,10 +335,6 @@ body.darkMode {
   .theme-toggle{
     padding: 10px;
   }
-
-  /* .intro {
-    padding: 0;
-  } */
 
   .slider{
     margin-top: 20%;
