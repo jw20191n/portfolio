@@ -1,3 +1,5 @@
+/* -------------------     GENERAL STYLES     --------------------*/
+
 body.home {
   font-family: 'Oxygen', sans-serif;
 }
@@ -13,7 +15,7 @@ body.home {
   padding: 50px 100px 0px 100px;
 }
 
-/* -------------------     Gradient Animation     --------------------*/
+/* ||  GRADIENT ANIMATION  */
 @-webkit-keyframes Gradient {
 	0% { background-position: 0% 50% }
 	50% { background-position: 100% 50 }
@@ -31,22 +33,24 @@ body.home {
 	50% { background-position: 100% 50% }
 	100% { background-position: 0% 50% }
 }
-/* --------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ */
 
 .flex-inner {
   background-color: #fff;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2);
   display: flex;
-  flex: 1;
   flex-direction: column;
-  justify-content: space-around;
   width: 100%;
-  position: relative;
-  flex-direction: column;
+  /* position: relative; */
+  /* justify-content: space-around; */
 }
 
+article {
+  margin-left: 56px;
+  margin-right: 56px;
+}
 
-/* ---------------------------           nav      -------------------------------- */
+/* ---------------------------    NAV     -------------------------------- */
 .theme-toggle {
   position: absolute;
   top: 0;
@@ -88,13 +92,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* ------------------------------------  main part of index.html  ------------------------ */
-article {
-  margin-left: 56px;
-  margin-right: 56px;
-}
-
-/* -----------------------------             carousel           ---------------------- */
+/* -----------------------------  CAROUSEL  ---------------------- */
 
 .slider {
   margin-top: 10%;
@@ -106,8 +104,6 @@ article {
 .slider h1 {
   color: #384150;
   font-size: 24px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
   line-height: 36px;
   padding-top: 5%;
   padding-left: 20%;
@@ -115,11 +111,8 @@ article {
 }
 
 a.conversation{
-  /* color: #b3bbc9; */
   color: #6B36E3;
   font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: subpixel-antialiased;
   line-height: 36px;
   padding-bottom: 10vh;
   padding-left: 20%;
@@ -133,7 +126,7 @@ a.conversation:hover{
   transition: all .5s ease-out;
 }
 
-/* ------------------------        section: current and proj             ------------------------- */
+/* ------------------------      SECTION        ------------------------- */
 
 section {
   display: flex;
@@ -194,7 +187,7 @@ a.link-logo:hover {
   color: #384150;
 }
 
-/* ----------------------------              Dark Mode           -------------------------------- */
+/* ----------------------------      DARK MODE       -------------------------------- */
 .darkMode .flex {
   color: white;
   background-color: #2A2040;
@@ -215,7 +208,6 @@ a.link-logo:hover {
 }
 
 .darkMode a.texts {
-  /* color:#e2e5eb; */
   color: #B5B7BC;
   background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 10%, hsla(0, 0%, 100%, .07) 0, hsla(0, 0%, 100%, .07));
 }
@@ -237,7 +229,8 @@ a.link-logo:hover {
 }
 
 /* --------------------------          RESPONSIVE           ------------------------------ */
-/* --------------------------breakpoint:960-------------------------- */
+
+/* --------------------------        breakpoint:960          -------------------------- */
 @media screen and (max-width: 960px) {
   .flex {
     padding: 0;
@@ -266,8 +259,8 @@ a.link-logo:hover {
   }
 }
 
-/*end of media  */
-/*----------------------------------breakpoint:850-------------------------------  */
+/*----------------------------------       breakpoint:850      -------------------------------  */
+
 @media screen and (max-width: 850px) {
   .flex-inner {
     max-width: 600px;
@@ -320,8 +313,7 @@ a.link-logo:hover {
   }
 }
 
-/*end of media  */
-/*----------------------------------breakpoint:460-------------------------------  */
+/*----------------------------------      breakpoint:460          ------------------------------  */
 @media screen and (max-width: 460px) {
   
   .flex-inner{
@@ -338,14 +330,7 @@ a.link-logo:hover {
 
   .slider{
     margin-top: 20%;
-    padding: 0;
     height: 80vh;
-  }
-
-  .slider h1{
-    padding-top: 20%;
-  }
-  
+  }  
 }
 
-/*end of media  */
