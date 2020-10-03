@@ -4,7 +4,7 @@ console.log("Hey " + wave);
 
 //dark mode
 function dark() {
-  var element = document.querySelector('.home');
+  const element = document.querySelector('.home');
   element.classList.toggle("darkMode");
 
   svgToggle();
@@ -12,11 +12,14 @@ function dark() {
 
 
 function svgToggle(){
-  var icon = document.getElementById('moon');
-  var icon2 = document.getElementById('sun');
+  const icon = document.getElementById('moon');
+  const icon2 = document.getElementById('sun');
 
   icon.classList.toggle('invisible');
   icon2.classList.toggle('invisible');
 }
+
+
+
 
 

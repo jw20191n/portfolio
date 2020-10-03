@@ -94,11 +94,15 @@ nav a:hover {
 
 /* -----------------------------  CAROUSEL  ---------------------- */
 
+.carousel-inner{
+  height: 90vh;
+}
+
 .slider {
-  margin-top: 10%;
-  margin-bottom: 20%;
-  justify-content: center;
-  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  top: 35%;
+  max-width: 550px;
 }
 
 .slider h1 {
@@ -106,17 +110,38 @@ nav a:hover {
   font-size: 24px;
   line-height: 36px;
   padding-top: 5%;
-  padding-left: 20%;
-  padding-right: 20%;
 }
+
+.large{
+  font-size: 40px;
+}
+
+/*------     emoji hand animation    ------------- */
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: 1;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+/*   ---------------------------    */
 
 a.conversation{
   color: #6B36E3;
   font-size: 16px;
   line-height: 36px;
   padding-bottom: 10vh;
-  padding-left: 20%;
-  padding-right: 20%;
   text-decoration: none;
 }
 
@@ -128,10 +153,13 @@ a.conversation:hover{
 
 /* ------------------------      SECTION        ------------------------- */
 
+
 section {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 56px;
 }
 
@@ -247,6 +275,10 @@ a.link-logo:hover {
     margin-top: 0px;
   }
 
+  .carousel-inner{
+    height: 100vh;
+  }
+
   .slider h1 {
     padding-left: 10%;
     padding-right: 10%;
@@ -276,6 +308,7 @@ a.link-logo:hover {
  section {
     flex-direction: column;
     padding: 0;
+    margin: 0;
   }
 
   article {
@@ -284,8 +317,6 @@ a.link-logo:hover {
 
   .slider{
     padding: 0;
-    margin-top: 35%;
-    margin-bottom: 35%;
   }
 
   .slider h1{
@@ -329,8 +360,8 @@ a.link-logo:hover {
   }
 
   .slider{
-    margin-top: 20%;
     height: 80vh;
+    top:20%;
   }  
 }
 
