@@ -20,7 +20,7 @@ The design concept of this portfolio is minimalism. Except for containing only t
 ## Mobile friendly  :iphone: 
 The site is also responsive / mobile friendly. <br/>
 Try visit [it](http://www.jiayiwang.co) through you phone!  <br/>
-<img src="images/iPhoneX-Clay-Frontal-White.png" width="20%" align="right" >
+<img src="images/iPhoneX-Clay-Frontal-White.png" width="25%" >
 <br/>
 
 
